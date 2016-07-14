@@ -21,11 +21,13 @@ assemblyMergeStrategy in assembly := {
 val versions = new {
   val finatra = "2.2.0"
   val logback = "1.1.7"
+  val config = "1.3.0"
 }
 
 
 libraryDependencies ++= Seq(
   "com.twitter" %% "finatra-http" % versions.finatra,
   "com.twitter" %% "finatra-httpclient" % versions.finatra,
-  "ch.qos.logback" % "logback-classic" % versions.logback
+  "ch.qos.logback" % "logback-classic" % versions.logback,
+  "com.typesafe" % "config" % versions.config
 )

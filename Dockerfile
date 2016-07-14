@@ -25,4 +25,4 @@ WORKDIR /app
 COPY . /app
 EXPOSE $PORT
 
-CMD sbt ~re-start -http.port=:$PORT -admin.port=:$PORT
+CMD sbt ~re-start
