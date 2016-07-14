@@ -3,6 +3,7 @@ organization := "xyz.lascuolaopensource"
 version := "1.0"
 scalaVersion := "2.11.8"
 
+enablePlugins(JavaAppPackaging)
 
 resolvers ++= Seq(
   Resolver.sonatypeRepo("releases"),
