@@ -8,6 +8,10 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[*.scala]
+[*.{scala, java, sbt}]
 indent_style = tab
 indent_size = 4
+
+[*.{json, xml, html}]
+indent_style = tab
+indent_size = 2
