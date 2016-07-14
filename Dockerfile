@@ -21,8 +21,12 @@ RUN \
   apt-get install sbt && \
   sbt sbtVersion
 
+# Install postgresql
+RUN apt-get install -y postgresql-9.4 postgresql-client-9.4
+USER postgres
+
 WORKDIR /app
 COPY . /app
 EXPOSE $PORT
 
-CMD sbt ~re-start
+CMD service postgresql start && sbt ~re-start
