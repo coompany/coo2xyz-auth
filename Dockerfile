@@ -3,6 +3,7 @@ FROM java:8
 
 ENV SCALA_VERSION 2.11.8
 ENV SBT_VERSION 0.13.11
+ENV PORT 8888
 
 # Install Scala
 ## Piping curl directly in tar
@@ -20,5 +21,8 @@ RUN \
   apt-get install sbt && \
   sbt sbtVersion
 
-# Define working directory
-WORKDIR /root
+WORKDIR /app
+COPY . /app
+EXPOSE $PORT
+
+CMD sbt ~re-start -http.port=:$PORT -admin.port=:$PORT
