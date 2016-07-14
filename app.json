@@ -1,0 +1,5 @@
+{
+  "name": "Coo2XYZ - auth",
+  "description": "Authorization and authentication module for Coo2XYZ",
+  "image": "heroku/scala"
+}
