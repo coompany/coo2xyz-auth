@@ -11,7 +11,7 @@ build_docker() {
 }
 
 run_docker() {
-    docker run -it -p 8888:8888 -v `pwd`:/app --rm --name coo2xyz-auth-app coo2xyz-auth
+    docker run -it -p 8888:8888 -v `pwd`:/app -v ~/.ivy2:/root/.ivy2 -v ~/.sbt:/root/.sbt --rm --name coo2xyz-auth-app coo2xyz-auth
 }
 
 while getopts "br" o; do

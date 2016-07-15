@@ -23,10 +23,16 @@ RUN \
 
 # Install postgresql
 RUN apt-get install -y postgresql-9.4 postgresql-client-9.4
+
 USER postgres
 
+RUN    /etc/init.d/postgresql start && \
+    psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" && \
+    createdb -O docker docker
+
 WORKDIR /app
-COPY . /app
 EXPOSE $PORT
+
+USER root
 
 CMD service postgresql start && sbt ~re-start
