@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Coo2XYZ - Auth</title>
-    <link rel="stylesheet" href="/assets/components/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/styles/main.css" />
-    <script src="/assets/components/jquery/dist/jquery.min.js"></script>
-    <script src="/assets/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="/assets/main.min.css" />
+    <script src="/assets/public/components/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/public/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/public/scripts/main.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -20,7 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Coo2XYZ</a>
+                <a class="navbar-brand" href="/">Coo2XYZ</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,11 +32,7 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                {{& renderedHtml }}
-            </div>
-        </div>
+        {{& renderedHtml }}
     </div>
 </body>
 </html>

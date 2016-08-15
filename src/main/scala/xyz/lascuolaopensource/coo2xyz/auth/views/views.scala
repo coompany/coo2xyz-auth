@@ -6,5 +6,3 @@ import com.twitter.finatra.response.Mustache
 @Mustache("layout")
 case class LayoutView(renderedHtml: String)
 
-case class TestView(string: String)
-

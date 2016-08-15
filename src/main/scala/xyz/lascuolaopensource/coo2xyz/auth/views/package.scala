@@ -8,6 +8,6 @@ package object views {
 
 	val mustache = new MustacheService(new DefaultMustacheFactory())
 
-	def view(template: String, obj: Any) = LayoutView(mustache.createString(s"templates/$template.mustache", obj))
+	def view(template: String, obj: Any = None) = LayoutView(mustache.createString(s"templates/$template.mustache", obj))
 
 }
